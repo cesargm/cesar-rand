@@ -80,7 +80,7 @@ def a2s(array):
   return str_pat
 
 def p2s(pattern):
-  a = termo_aux.p2a(pattern)
+  a = p2a(pattern)
   return a2s(a)
 
 def print_match(word, pattern, nl=True):
