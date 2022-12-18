@@ -68,6 +68,21 @@ def a2p(array):
     p = 3*p + match
   return p
 
+def a2s(array):
+  str_pat = ""
+  for match in array:
+    if match == termo_aux.EXACT:
+      str_pat += 'O'
+    elif match == termo_aux.MISPLACED:
+      str_pat += '?'
+    elif match == termo_aux.MISS:
+      str_pat += '-'
+  return str_pat
+
+def p2s(pattern):
+  a = termo_aux.p2a(pattern)
+  return a2s(a)
+
 def print_match(word, pattern, nl=True):
   colors = p2a(pattern)
   for i, c in enumerate(word):
