@@ -71,11 +71,11 @@ def a2p(array):
 def a2s(array):
   str_pat = ""
   for match in array:
-    if match == termo_aux.EXACT:
+    if match == EXACT:
       str_pat += 'O'
-    elif match == termo_aux.MISPLACED:
+    elif match == MISPLACED:
       str_pat += '?'
-    elif match == termo_aux.MISS:
+    elif match == MISS:
       str_pat += '-'
   return str_pat
 
